@@ -18,6 +18,15 @@ Misses easy implementation errors like importing default python libraries
 
 Calls server or similar blocking processes in the foreground blocking itself ad infinitum.
 
+
+![](imgs/windsurf.png)
+
+![](imgs/copilot.png)
+
+
+
+using gemini 3 in windsurf and/or copilot crashes both hosts pretty often, which is also wild...
+
 Pls fix google. Currently it's just unusable.
 
 # Agent Comparison Series

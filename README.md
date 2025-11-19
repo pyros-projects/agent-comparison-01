@@ -1,43 +1,100 @@
-# Agent Comparison Series
+Cursor rewrote the README, but did a good job!
 
-This repository is part of a small series of complex development tasks used to compare different AI agents and orchestration approaches.
+![Sample Image](imgs/1.png)
 
-This is not an automated benchmark and it does not provide automated scoring.
-Instead, human developers are expected to review the results and decide which agent best matches their own requirements, workflows, and expectations.
-Software engineering is inherently personal, so the goal of this series is to provide rich, realistic tasks that allow each person to form an independent opinion about agent behavior and quality.
+![Sample Image](imgs/2.png)
 
-The `main` branch always contains the givens for a task, usually a `prompt.md` and some boilerplate code.
-Additional branches represent individual runs with different agents or orchestration strategies (for example, spec-kit, openspec, or bmad).
+![Sample Image](imgs/3.png)
 
-# Comparison 01 - Research RAG app
 
-This scenario asks the agent to build a web application that acts as a research catalog database for AI‑related research papers and code repositories.
+# Research Catalog Database
 
-At a high level the app should:
+A web application that serves as a research catalog database for AI-related research papers and repositories.
 
-- Continuously discover and ingest new research papers (e.g. from arXiv) and research repositories (e.g. from GitHub), download them, and analyze them with an LLM (gpt‑5 or gpt-4.1 via OpenAI/Azure OpenAI).
-- For each paper/repository, generate a summary, tags, key findings, and a list of questions it answers, plus two scores: real‑world relevancy (x/10) and “interesting stuff” (x/10).
-- Store all results in a single GraphRAG‑style database (for this PoC: something simple like TinyDB with a graph layer on top) to enable clustering, similarity search, and cross‑linking between related papers and repos.
+## Features
 
-The app exposes three main user modes:
+### Cataloguing Mode
+- **Papers**: Automatically searches arXiv for new AI/ML papers, downloads them, and analyzes them using LLM
+- **Repositories**: Searches GitHub for AI/ML repositories and analyzes them
+- Both modes run continuously until stopped
+- Each item gets:
+  - Summary
+  - Tags
+  - Questions answered
+  - Key findings
+  - Relevancy score (0-10)
+  - Interesting score (0-10)
 
-- Cataloguing mode: Long‑running ingestion for papers and repositories that keeps running until stopped, with progress visible to the user.
-- Search mode: Search and browse papers/repos in the database, view rich detail pages, and analyze an arbitrary paper or repo link to find similar items.
-- Theory mode: Given a theory or question, surface supporting and opposing evidence from the catalog (e.g. how many papers agree/disagree) and related insights or follow‑up questions.
+### Search Mode
+- Search papers and repositories in the database
+- Process URLs to analyze papers or repositories
+- View detailed information about each item
+- Find similar papers/repositories
 
-Key UX requirements:
+### Theory Mode
+- Enter a theory or question
+- Find supporting and opposing evidence
+- Get related theories and suggestions
 
-- A sleek web UI with:
-  - Graph view for visualizing clusters and relationships between items.
-  - Dashboard view with high‑level ingestion and catalog statistics.
-- Realtime feedback with a persistent status bar showing system state (e.g. current ingest progress).
-- When queries are too sparse, suggest related theories/questions or starting cataloguing mode to gather more data.
+### Views
+- **Dashboard**: Overview of statistics and cataloguing controls
+- **Graph View**: Visualize relationships between papers and repositories
 
-Technical constraints:
+### Realtime Feedback
+- Status bar shows current system state
+- WebSocket updates for cataloguing progress
 
-- Python backend using `uv` as the project manager (`uv add` / `uv run` for deps and commands).
-- Vite + React frontend.
-- Use `litellm` for all LLM interactions, configured via the provided `.env` (do not overwrite it).
-- Use browser automation tools like Playwright MCP tools to exercise/test the frontend.
+## Setup
 
-See `prompt.md` for the full, authoritative task description.
+### Backend
+
+1. Install dependencies:
+```bash
+uv sync
+```
+
+2. Make sure you have a `.env` file with:
+```
+DEFAULT_MODEL=gpt-4o
+DEFAULT_EMBEDDING_MODEL=text-embedding-3-small
+# Add your OpenAI/Azure OpenAI keys as needed for litellm
+```
+
+3. Run the backend:
+```bash
+uv run researcher
+```
+
+The backend will run on http://localhost:8000
+
+### Frontend
+
+1. Install dependencies:
+```bash
+cd frontend
+npm install
+```
+
+2. Run the frontend:
+```bash
+npm run dev
+```
+
+The frontend will run on http://localhost:5173
+
+## Usage
+
+1. Start the backend server
+2. Start the frontend development server
+3. Open http://localhost:5173 in your browser
+4. Use the Dashboard to start cataloguing papers/repositories
+5. Use Search to find items or process URLs
+6. Use Theory mode to analyze theories/questions
+7. View the Graph to see relationships
+
+## Technical Stack
+
+- **Backend**: Python, FastAPI, TinyDB, NetworkX, litellm, arxiv, PyGithub
+- **Frontend**: React, Vite, React Router, Recharts, Axios
+- **Database**: TinyDB with NetworkX graph layer
+- **LLM**: litellm (supports OpenAI, Azure OpenAI, etc.)

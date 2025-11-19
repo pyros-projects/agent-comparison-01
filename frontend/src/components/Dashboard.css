@@ -1,0 +1,94 @@
+.dashboard {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard.loading {
+  text-align: center;
+  padding: 48px;
+}
+
+.dashboard h1 {
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cataloguing-controls {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cataloguing-controls h2 {
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.control-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.control-buttons button:hover {
+  background: #e0e0e0;
+}
+
+.control-buttons button.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.chart-section {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section h2 {
+  margin: 0 0 16px 0;
+  color: #333;
+}
+

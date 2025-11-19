@@ -13,6 +13,17 @@ Additional branches represent individual runs with different agents or orchestra
 
 CodexCLI in yolo mode with gpt-5.1 high and the prompt "pls implement prompt.md"
 
+
+# Agent result
+
+In root run `uv run reasearcher` and in a new terminal run `cd frontend && npm run dev`
+
+Working app with bugs (graph visualization does not work). Solid base to iteratively improve on.
+
+![](imgs/image1.png)
+
+![](imgs/image.png)
+
 # Comparison 01 - Research RAG app
 
 This scenario asks the agent to build a web application that acts as a research catalog database for AI‑related research papers and code repositories.

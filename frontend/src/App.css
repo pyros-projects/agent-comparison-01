@@ -1,0 +1,371 @@
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem 0.5rem;
+  gap: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.app-subtitle {
+  margin: 0.4rem 0 0;
+  color: #8a8fa3;
+  font-size: 0.95rem;
+}
+
+.app-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(128, 128, 160, 0.4);
+  margin: 0 0.25rem;
+}
+
+.app-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(128, 128, 160, 0.4);
+  padding-bottom: 0.25rem;
+}
+
+.tab-button {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background-color: transparent;
+  color: #a0a4b8;
+  font-size: 0.9rem;
+}
+
+.tab-button-active {
+  background: linear-gradient(135deg, #6366f1, #22c1c3);
+  color: #ffffff;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.stat-card {
+  background: radial-gradient(circle at top left, #1d283a, #020617);
+  border-radius: 0.9rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.stat-card h3,
+.stat-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.stat-card.agree {
+  border-color: rgba(34, 197, 94, 0.6);
+}
+.stat-card.disagree {
+  border-color: rgba(239, 68, 68, 0.6);
+}
+.stat-card.neutral {
+  border-color: rgba(234, 179, 8, 0.6);
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background-color: rgba(15, 23, 42, 0.9);
+  color: inherit;
+}
+
+.textarea {
+  min-height: 80px;
+}
+
+.select {
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background-color: rgba(15, 23, 42, 0.9);
+  color: inherit;
+}
+
+.btn {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1, #22c1c3);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: rgba(51, 65, 85, 0.9);
+  color: #e5e7eb;
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: #9ca3af;
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.results-list {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.result-card {
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 0.75rem 0.9rem;
+  background: radial-gradient(circle at top left, #020617, #020617);
+}
+
+.result-header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.result-title {
+  margin: 0;
+}
+
+.result-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.result-summary {
+  margin: 0.25rem 0 0.5rem;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag-pill {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background-color: rgba(31, 41, 55, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.score-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.kind-pill {
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background-color: rgba(55, 65, 81, 0.9);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stance-pill {
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stance-agree {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.8);
+}
+
+.stance-disagree {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.8);
+}
+
+.stance-uncertain {
+  background-color: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.8);
+}
+
+.theory-summary {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.suggestions {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(148, 163, 184, 0.5);
+}
+
+.suggestions h4 {
+  margin: 0 0 0.25rem;
+}
+
+.muted {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #fca5a5;
+  font-size: 0.9rem;
+}
+
+.link-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(148, 163, 184, 0.5);
+}
+
+.link-section h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.link-results {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.link-similar h4 {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.graph-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-container {
+  margin-top: 0.75rem;
+  height: 480px;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.status-bar {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  align-items: baseline;
+}
+
+.status-divider {
+  opacity: 0.6;
+}
+
+.status-detail {
+  font-size: 0.78rem;
+  color: #cbd5f5;
+}
+
+.status-warning {
+  color: #fbbf24;
+}
+
+.status-error {
+  color: #fca5a5;
+}
+
+@media (max-width: 768px) {
+  .app-root {
+    padding: 1rem;
+  }
+  .app-header {
+    flex-direction: column;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

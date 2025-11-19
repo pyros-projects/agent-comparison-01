@@ -9,6 +9,10 @@ Software engineering is inherently personal, so the goal of this series is to pr
 The `main` branch always contains the givens for a task, usually a `prompt.md` and some boilerplate code.
 Additional branches represent individual runs with different agents or orchestration strategies (for example, spec-kit, openspec, or bmad).
 
+# Agent execution
+
+CodexCLI in yolo mode with gpt-5.1 high and the prompt "pls implement prompt.md"
+
 # Comparison 01 - Research RAG app
 
 This scenario asks the agent to build a web application that acts as a research catalog database for AI‑related research papers and code repositories.

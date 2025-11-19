@@ -7,7 +7,20 @@ authors = [
     { name = "Andre Ratzenberger", email = "andre.ratzenberger@whiteduck.de" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "arxiv>=2.3.1",
+    "beautifulsoup4>=4.14.2",
+    "fastapi>=0.121.2",
+    "httpx>=0.28.1",
+    "litellm>=1.80.0",
+    "networkx>=3.5",
+    "numpy>=2.3.5",
+    "python-dotenv>=1.2.1",
+    "scikit-learn>=1.7.2",
+    "tenacity>=9.1.2",
+    "tinydb>=4.8.2",
+    "uvicorn>=0.38.0",
+]
 
 [project.scripts]
 researcher = "researcher:main"

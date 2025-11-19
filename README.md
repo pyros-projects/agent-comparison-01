@@ -1,3 +1,25 @@
+Unfortunately either gemini CLI and/or gemini-3 are seriously broken
+
+![](imgs/2.png)
+
+![](imgs/1.png)
+
+Hallucinating implementation
+
+![](imgs/3.png)
+
+Thinks itself into loops of broken tool calls. Doesn't relize the app is not running/crashing, and thinks the tool is broken.
+
+![](imgs/4.png)
+
+Misses easy implementation errors like importing default python libraries
+
+![](imgs/5.png)
+
+Calls server or similar blocking processes in the foreground blocking itself ad infinitum.
+
+Pls fix google. Currently it's just unusable.
+
 # Agent Comparison Series
 
 This repository is part of a small series of complex development tasks used to compare different AI agents and orchestration approaches.

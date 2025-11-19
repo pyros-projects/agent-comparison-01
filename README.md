@@ -1,9 +1,9 @@
 # Agent Comparison Series
 
-This is going to be a small series of rather complex development task.
+This repository is part of a small series of complex development tasks used to compare different AI agents and orchestration approaches.
 
-main branch will always consists of the givens, usually a prompt.md and some boilerplate.
-branches are the tries of different agenrt and orchestration forms (spec-kit vs openspec vs bmad for example)
+The `main` branch always contains the givens for a task, usually a `prompt.md` and some boilerplate code.
+Additional branches represent individual runs with different agents or orchestration strategies (for example, spec-kit, openspec, or bmad).
 
 # Comparison 01 - Research RAG app
 
